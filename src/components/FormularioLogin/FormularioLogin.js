@@ -11,16 +11,23 @@ const FormularioLogin = (props) => {
   const login = () => {
     props.setPageFlow(2);
   };
+  function onChangeUsuario(event){
+    props.setUsuario(event.target.value)
+  }
+  function onChangeImagem(event){
+    props.setImagem(event.target.value)
+  }
+  
   return (
     <FormContainer>
       <Form>
         <StyledLabel>
           Nome:
-          <Input type={"text"} />
+          <Input type={"text"} value={props.usuario} onChange={onChangeUsuario} />
         </StyledLabel>
         <StyledLabel>
           Foto de Perfil
-          <Input type={"text"} />
+          <Input type={"text"} value={props.Imagem} onChange={onChangeImagem}/>
         </StyledLabel>
         <SendButton onClick={login}>Fazer Login</SendButton>
       </Form>

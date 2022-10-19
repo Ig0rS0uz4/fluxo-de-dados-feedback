@@ -7,3 +7,8 @@ export const TitleHeader = styled.header`
     justify-content: center;
     height: 8vh;
 `
+export const Imagem = styled.img`
+    width: 50px;
+    height: 50px;
+    border-radious: 20px
+`
