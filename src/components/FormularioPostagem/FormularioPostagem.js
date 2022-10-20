@@ -1,16 +1,7 @@
 import { FormContainer, Form, Input, StyledLabel, SendButton } from "./styled";
+import { useState } from "react";
 
 export const FormularioCadastro = (props) => {
-
-  function onChangeTitulo(event){
-    props.setTitulo(event.target.value)
-  }
-  function onChangeImagem(event){
-    props.setImagem(event.target.value)
-  }
-  function onChangeDescricao(event){
-    props.setDescricao(event.target.value)
-  }
 
   return (
     <FormContainer>
@@ -18,15 +9,15 @@ export const FormularioCadastro = (props) => {
       <Form>
         <StyledLabel htmlFor="titulo">
           Titulo:
-          <Input id="titulo" value={props.titulo} onChange={onChangeTitulo}/>
+          <Input id="titulo"/>
         </StyledLabel>
         <StyledLabel htmlFor="foto">
           Imagem:
-          <Input id="foto" value={props.imagem} onChange={onChangeImagem}/>
+          <Input id="foto" />
         </StyledLabel>
         <StyledLabel htmlFor="descricao">
           Descrição:
-          <Input id="descricao" value={props.descricao} onChange={onChangeDescricao}/>
+          <Input id="descricao" />
         </StyledLabel>
         
       </Form>

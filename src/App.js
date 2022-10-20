@@ -19,47 +19,28 @@ const Container = styled.div`
 `;
 
 function App() {
-  const [usuario, setUsuario] = useState("")
-  const [imagem, setImagem] = useState("")
-  const [titulo, setTitulo] = useState("")
-  const [descricao, setDescricao] = useState("")
   const [pageFlow, setPageFlow] = useState(1);
+  const [usuario, setUsuario] = useState("")
+
   return (
     <>
       <GlobalStyle />
       <Container>
         <aside>
           <Header 
-          usuario={usuario}
-          imagem={imagem}
+            usuario={usuario} pageFlow={pageFlow}
           />
           {pageFlow === 1 ? (
-            <FormularioLogin 
-            usuario={usuario}
-            imagem={imagem}
-
-            setUsuario={setUsuario}
-            setImagem={setImagem}
-            setPageFlow={setPageFlow}
+            <FormularioLogin setPageFlow={setPageFlow}
+            usuario={usuario} setUsuario={setUsuario}
             />
           ) : (
             <FormularioPostagem 
-            imagem={imagem}
-            titulo={titulo}
-            descricao={descricao}
-
-            setImagem={setImagem}
-            setTitulo={setTitulo}
-            setDescricao={setDescricao}
             />
           )}
         </aside>
         <TelaDaPostagem 
-        usuario={usuario}
-        imagem={imagem}
 
-        setUsuario={setUsuario}
-        setImagem={setImagem}
         />
       </Container>
     </>

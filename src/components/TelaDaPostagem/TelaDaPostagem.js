@@ -6,9 +6,9 @@ const TelaDaPostagem = (props) => {
 
   return (
     <ContainerPostagem>
-      <TitleHeader>{props.titulo}</TitleHeader>
-      <Image src={props.imagem} />
-      <Description>{props.descricao}</Description>
+      <TitleHeader></TitleHeader>
+      <Image  />
+      <Description></Description>
     </ContainerPostagem>
   );
 };
